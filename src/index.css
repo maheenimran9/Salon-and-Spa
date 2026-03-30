@@ -1,0 +1,39 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  
+  --color-cream: #FCFBF7;
+  --color-sage: #8DA399;
+  --color-sage-dark: #6B7D75;
+  --color-warm-grey: #4A4A4A;
+  --color-warm-grey-light: #7A7A7A;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-cream text-warm-grey font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-medium text-warm-grey;
+  }
+}
+
+.glass-nav {
+  @apply bg-cream/80 backdrop-blur-md border-b border-sage/10;
+}
+
+.service-card {
+  @apply bg-white p-8 rounded-2xl border border-sage/5 transition-all duration-500 hover:border-sage/20 hover:shadow-[0_10px_40px_rgba(141,163,153,0.1)] hover:-translate-y-1;
+}
+
+.faq-item {
+  @apply border-b border-sage/10;
+}
